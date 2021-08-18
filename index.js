@@ -5,7 +5,8 @@ const {
 sgMail.setApiKey(SENDGRID_API_KEY);
 
 export const sendEmail = async ({
-	to, subject, html, text
+	to, subject, html, text,
+	from = 'contact@oursatori.com'
 }) => {
 	if (!to || !subject || !html) {
 		console.warn('EMAIL - not sent. Must include to, subject and html');
@@ -15,7 +16,7 @@ export const sendEmail = async ({
 	try {
 		const [res] = await sgMail.send({
 			to, subject, html, text,
-			from: 'contact@oursatori.com',
+			from,
 		})
 		console.log('EMAIL -', to);
 		// console.log(res)
