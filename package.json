@@ -1,0 +1,22 @@
+{
+  "name": "@satori-hq/email",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satori-hq/email.git"
+  },
+  "author": "mattlockyer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/satori-hq/email/issues"
+  },
+  "homepage": "https://github.com/satori-hq/email#readme",
+  "dependencies": {
+    "@sendgrid/mail": "^7.4.6"
+  }
+}
