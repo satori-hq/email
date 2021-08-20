@@ -1,11 +1,12 @@
 {
 	"name": "@satori-hq/email",
-	"version": "1.0.10",
+	"version": "1.0.12",
 	"description": "",
 	"main": "./index.js",
 	"scripts": {
 		"build": "rm -rf ./index.js && babel src -o ./index.js",
-		"publish": "yarn build && npm publish --access public",
+		"git": "git add --all && git commit -am 'release' && git push",
+		"publish": "yarn build && yarn git && npm publish --access public",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
